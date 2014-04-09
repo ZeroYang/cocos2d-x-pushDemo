@@ -51,8 +51,50 @@ static AppDelegate s_sharedApplication;
     
     cocos2d::CCApplication::sharedApplication()->run();
 
+    //======================push========================
+    
+    [application setApplicationIconBadgeNumber:0];
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeAlert
+     | UIRemoteNotificationTypeBadge
+     | UIRemoteNotificationTypeSound];
+    
+    
+    //TODO 启动时收到push
+    NSDictionary * userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if(userInfo) {
+        [application setApplicationIconBadgeNumber:0];
+        NSLog(@"LaunchOptionsRemoteNotification:%@",[userInfo description]);
+        
+        
+        //存储push
+        [[NSUserDefaults standardUserDefaults] setObject:userInfo forKey:@"pushNotification"];
+        
+    }
+    
+    //======================push========================
     return YES;
 }
+
+//======================push========================
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    NSLog(@"push deviceToken:%@",deviceToken);
+    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:@"deviceToken"];
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSLog(@"Receive Notify: %@", [userInfo description]);
+    [application setApplicationIconBadgeNumber:0];
+
+    
+    //程序运行状态获取push消息
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pushNotification" object:self userInfo:userInfo];
+    
+    
+}
+//======================push========================
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
