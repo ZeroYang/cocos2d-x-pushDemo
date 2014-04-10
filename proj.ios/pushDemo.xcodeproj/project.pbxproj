@@ -234,6 +234,7 @@
 		379BB9D317F03F3700829B88 /* CCSGUIReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99117F03F3700829B88 /* CCSGUIReader.cpp */; };
 		379BB9D417F03F3700829B88 /* CCSSceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* CCSSceneReader.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
+		7E78EB3118F6E7AA0096E5D0 /* pushHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E78EB2F18F6E7AA0096E5D0 /* pushHelper.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -730,6 +731,8 @@
 		379BB99417F03F3700829B88 /* CCSSceneReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSSceneReader.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		7E32407E18F5478400AEA70A /* PushProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushProtocol.h; sourceTree = "<group>"; };
+		7E78EB2F18F6E7AA0096E5D0 /* pushHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pushHelper.cpp; sourceTree = "<group>"; };
+		7E78EB3018F6E7AA0096E5D0 /* pushHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pushHelper.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1730,6 +1733,8 @@
 			isa = PBXGroup;
 			children = (
 				7E32407E18F5478400AEA70A /* PushProtocol.h */,
+				7E78EB2F18F6E7AA0096E5D0 /* pushHelper.cpp */,
+				7E78EB3018F6E7AA0096E5D0 /* pushHelper.h */,
 			);
 			name = PushHelper;
 			path = ../Classes/PushHelper;
@@ -1874,6 +1879,7 @@
 				15A3D9291682F7D5002FB0C5 /* b2WeldJoint.cpp in Sources */,
 				15A3D92A1682F7D5002FB0C5 /* b2WheelJoint.cpp in Sources */,
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,
+				7E78EB3118F6E7AA0096E5D0 /* pushHelper.cpp in Sources */,
 				15A3D9951682F7F9002FB0C5 /* chipmunk.c in Sources */,
 				15A3D9971682F7F9002FB0C5 /* cpConstraint.c in Sources */,
 				15A3D9981682F7F9002FB0C5 /* cpDampedRotarySpring.c in Sources */,

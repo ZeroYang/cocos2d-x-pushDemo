@@ -4,6 +4,8 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 
+#import "pushHelper.h"
+
 @implementation AppController
 
 #pragma mark -
@@ -65,10 +67,8 @@ static AppDelegate s_sharedApplication;
     if(userInfo) {
         [application setApplicationIconBadgeNumber:0];
         NSLog(@"LaunchOptionsRemoteNotification:%@",[userInfo description]);
-        
-        
-        //存储push
-        [[NSUserDefaults standardUserDefaults] setObject:userInfo forKey:@"pushNotification"];
+
+        pushHelper::sharedPushHelper()->applicationDidFinishLaunchingWithNotification([[userInfo description] cStringUsingEncoding:NSUTF8StringEncoding]);
         
     }
     
@@ -80,7 +80,9 @@ static AppDelegate s_sharedApplication;
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     NSLog(@"push deviceToken:%@",deviceToken);
-    [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:@"deviceToken"];
+    
+    pushHelper::sharedPushHelper()->applicationDidRegisterForRemoteNotificationsWithDeviceToken([[deviceToken description] cStringUsingEncoding:NSUTF8StringEncoding]);
+
     
 }
 
@@ -88,11 +90,8 @@ static AppDelegate s_sharedApplication;
     NSLog(@"Receive Notify: %@", [userInfo description]);
     [application setApplicationIconBadgeNumber:0];
 
-    
-    //程序运行状态获取push消息
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"pushNotification" object:self userInfo:userInfo];
-    
-    
+    pushHelper::sharedPushHelper()->applicationDidReceiveRemoteNotification([[userInfo description] cStringUsingEncoding:NSUTF8StringEncoding]);
+
 }
 //======================push========================
 

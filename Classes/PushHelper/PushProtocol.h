@@ -9,8 +9,6 @@
 #ifndef __pushDemo__PushProtocol__
 #define __pushDemo__PushProtocol__
 
-#include <iostream>
-
 class  PushProtocol
 {
 public:
