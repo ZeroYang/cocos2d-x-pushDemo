@@ -36,7 +36,13 @@ public:
      @brief  The function be called when the application register remote notification success
      @param  deviceToken the pointer of the notification token string
      */
-    bool applicationDidRegisterForRemoteNotificationsWithDeviceToken(const char *deviceToken);
+    void applicationDidRegisterForRemoteNotificationsWithDeviceToken(const char *deviceToken);
+
+    /**
+     @brief  The function be called when the application register remote notification failed
+     @param  error the pointer of the register remote notification failed string
+     */
+    void applicationdidFailToRegisterForRemoteNotificationsWithError(const char *error);
     
     /**
      @brief  The function be called when the application running receive remote notification

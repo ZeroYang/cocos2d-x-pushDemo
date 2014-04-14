@@ -55,12 +55,12 @@ static AppDelegate s_sharedApplication;
 
     //======================push========================
     
-    [application setApplicationIconBadgeNumber:0];
     [application registerForRemoteNotificationTypes:
      UIRemoteNotificationTypeAlert
      | UIRemoteNotificationTypeBadge
      | UIRemoteNotificationTypeSound];
     
+    [application setApplicationIconBadgeNumber:0];
     
     //TODO 启动时收到push
     NSDictionary * userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
@@ -84,6 +84,11 @@ static AppDelegate s_sharedApplication;
     pushHelper::sharedPushHelper()->applicationDidRegisterForRemoteNotificationsWithDeviceToken([[deviceToken description] cStringUsingEncoding:NSUTF8StringEncoding]);
 
     
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+    pushHelper::sharedPushHelper()->applicationdidFailToRegisterForRemoteNotificationsWithError([[error description] cStringUsingEncoding:NSUTF8StringEncoding]);
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {

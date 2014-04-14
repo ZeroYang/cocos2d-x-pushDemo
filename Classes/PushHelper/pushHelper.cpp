@@ -33,10 +33,14 @@ bool pushHelper::applicationDidFinishLaunchingWithNotification(const char* notif
     return true;
 }
 
-bool pushHelper::applicationDidRegisterForRemoteNotificationsWithDeviceToken(const char *deviceToken)
+void pushHelper::applicationDidRegisterForRemoteNotificationsWithDeviceToken(const char *deviceToken)
 {
     CCLOG("deviceToken=%s",deviceToken);
-    return true;
+}
+
+void pushHelper::applicationdidFailToRegisterForRemoteNotificationsWithError(const char *error)
+{
+    CCLOG("FailToRegisterForRemoteNotificationsWithError=%s",error);
 }
 
 void pushHelper::applicationDidReceiveRemoteNotification(const char* notificationJson)
