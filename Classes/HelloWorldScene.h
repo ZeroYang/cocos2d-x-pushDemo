@@ -17,6 +17,15 @@ public:
     
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);
+    
+private:
+    void applicationDidReceiveRemoteNotification(cocos2d::CCString* notificationJson);
+    
+
+    void applicationDidRegisterForRemoteNotificationsWithDeviceToken(cocos2d::CCString *deviceToken);
+    
+
+    void applicationdidFailToRegisterForRemoteNotificationsWithError(cocos2d::CCString *error);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

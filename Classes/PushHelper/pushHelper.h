@@ -10,11 +10,10 @@
 #define __pushDemo__pushHelper__
 
 #include "cocos2d.h"
-#include "PushProtocol.h"
 
 USING_NS_CC;
 
-class  pushHelper : private PushProtocol
+class  pushHelper
 {
 public:
     pushHelper();

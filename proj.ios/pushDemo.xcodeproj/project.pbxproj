@@ -730,9 +730,9 @@
 		379BB99317F03F3700829B88 /* CCSSceneReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSSceneReader.cpp; sourceTree = "<group>"; };
 		379BB99417F03F3700829B88 /* CCSSceneReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSSceneReader.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
-		7E32407E18F5478400AEA70A /* PushProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushProtocol.h; sourceTree = "<group>"; };
 		7E78EB2F18F6E7AA0096E5D0 /* pushHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pushHelper.cpp; sourceTree = "<group>"; };
 		7E78EB3018F6E7AA0096E5D0 /* pushHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pushHelper.h; sourceTree = "<group>"; };
+		7EAADA8C18FD633A002869EA /* push.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = push.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1732,9 +1732,9 @@
 		7E32407C18F5473100AEA70A /* PushHelper */ = {
 			isa = PBXGroup;
 			children = (
-				7E32407E18F5478400AEA70A /* PushProtocol.h */,
 				7E78EB2F18F6E7AA0096E5D0 /* pushHelper.cpp */,
 				7E78EB3018F6E7AA0096E5D0 /* pushHelper.h */,
+				7EAADA8C18FD633A002869EA /* push.h */,
 			);
 			name = PushHelper;
 			path = ../Classes/PushHelper;
@@ -2102,7 +2102,7 @@
 				);
 				OTHER_CFLAGS = "-O2";
 				PRODUCT_NAME = pushDemo;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "BD630EC3-77A4-48E0-938B-0AA64495269C";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

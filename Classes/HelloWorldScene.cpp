@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "push.h"
 
 USING_NS_CC;
 
@@ -73,6 +74,17 @@ bool HelloWorld::init()
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
     
+    
+    //listen push
+    CCNotificationCenter::sharedNotificationCenter()->addObserver(this, callfuncO_selector(HelloWorld::applicationDidReceiveRemoteNotification),
+                                                                  REMOTE_NOTIFICATION, NULL);
+    
+    CCNotificationCenter::sharedNotificationCenter()->addObserver(this, callfuncO_selector(HelloWorld::applicationDidRegisterForRemoteNotificationsWithDeviceToken),
+                                                                  REGISTER_REMOTE_NOTIFICATION_DEVICE_TOKEN, NULL);
+    
+    CCNotificationCenter::sharedNotificationCenter()->addObserver(this, callfuncO_selector(HelloWorld::applicationdidFailToRegisterForRemoteNotificationsWithError),
+                                                                  REGISTER_REMOTE_NOTIFICATION_ERROR, NULL);
+    
     return true;
 }
 
@@ -87,4 +99,19 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
     exit(0);
 #endif
 #endif
+}
+
+void HelloWorld::applicationDidReceiveRemoteNotification(CCString* notificationJson)
+{
+    CCLOG("HelloWorld::applicationDidReceiveRemoteNotification=%s",notificationJson->getCString());
+}
+
+void HelloWorld::applicationDidRegisterForRemoteNotificationsWithDeviceToken(CCString* deviceToken)
+{
+    CCLOG("HelloWorld::applicationDidRegisterForRemoteNotificationsWithDeviceToken=%s",deviceToken->getCString());
+}
+
+void HelloWorld::applicationdidFailToRegisterForRemoteNotificationsWithError(CCString* error)
+{
+    CCLOG("HelloWorld::FailToRegisterForRemoteNotificationsWithError=%s",error->getCString());
 }
