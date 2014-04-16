@@ -235,6 +235,16 @@
 		379BB9D417F03F3700829B88 /* CCSSceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* CCSSceneReader.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		7E78EB3118F6E7AA0096E5D0 /* pushHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E78EB2F18F6E7AA0096E5D0 /* pushHelper.cpp */; };
+		7EC22CFE18FE84CD0065ABCB /* BPushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EC22CEC18FE84CD0065ABCB /* BPushConfig.plist */; };
+		7EC22CFF18FE84CD0065ABCB /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC22CEF18FE84CD0065ABCB /* libBPush.a */; };
+		7EC22D0018FE84CD0065ABCB /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC22CF218FE84CD0065ABCB /* Base64.m */; };
+		7EC22D0118FE84CD0065ABCB /* GzipCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC22CF518FE84CD0065ABCB /* GzipCompressor.m */; };
+		7EC22D0218FE84CD0065ABCB /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC22CF718FE84CD0065ABCB /* JSONKit.m */; };
+		7EC22D0318FE84CD0065ABCB /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC22CF918FE84CD0065ABCB /* OpenUDID.m */; };
+		7EC22D0418FE84CD0065ABCB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC22CFB18FE84CD0065ABCB /* Reachability.m */; };
+		7EC22D0718FE86ED0065ABCB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC22D0618FE86ED0065ABCB /* CoreTelephony.framework */; };
+		7EC22D0918FE86FD0065ABCB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC22D0818FE86FD0065ABCB /* CFNetwork.framework */; };
+		7EC22D0B18FE870B0065ABCB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC22D0A18FE870B0065ABCB /* SystemConfiguration.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -733,6 +743,23 @@
 		7E78EB2F18F6E7AA0096E5D0 /* pushHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pushHelper.cpp; sourceTree = "<group>"; };
 		7E78EB3018F6E7AA0096E5D0 /* pushHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pushHelper.h; sourceTree = "<group>"; };
 		7EAADA8C18FD633A002869EA /* push.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = push.h; sourceTree = "<group>"; };
+		7EC22CEC18FE84CD0065ABCB /* BPushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BPushConfig.plist; sourceTree = "<group>"; };
+		7EC22CEE18FE84CD0065ABCB /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
+		7EC22CEF18FE84CD0065ABCB /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		7EC22CF118FE84CD0065ABCB /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		7EC22CF218FE84CD0065ABCB /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		7EC22CF318FE84CD0065ABCB /* Base64Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Defines.h; sourceTree = "<group>"; };
+		7EC22CF418FE84CD0065ABCB /* GzipCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzipCompressor.h; sourceTree = "<group>"; };
+		7EC22CF518FE84CD0065ABCB /* GzipCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzipCompressor.m; sourceTree = "<group>"; };
+		7EC22CF618FE84CD0065ABCB /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		7EC22CF718FE84CD0065ABCB /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		7EC22CF818FE84CD0065ABCB /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		7EC22CF918FE84CD0065ABCB /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		7EC22CFA18FE84CD0065ABCB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7EC22CFB18FE84CD0065ABCB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7EC22D0618FE86ED0065ABCB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7EC22D0818FE86FD0065ABCB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7EC22D0A18FE870B0065ABCB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -754,6 +781,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC22D0B18FE870B0065ABCB /* SystemConfiguration.framework in Frameworks */,
+				7EC22D0918FE86FD0065ABCB /* CFNetwork.framework in Frameworks */,
+				7EC22D0718FE86ED0065ABCB /* CoreTelephony.framework in Frameworks */,
 				15A3DA6A1682F886002FB0C5 /* libcocos2dx.a in Frameworks */,
 				1ACB3244164770DE00914215 /* libcurl.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -764,6 +794,7 @@
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
+				7EC22CFF18FE84CD0065ABCB /* libBPush.a in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 				1AB8703C175E0A92005D39BF /* libwebsockets.a in Frameworks */,
@@ -1397,6 +1428,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EC22D0A18FE870B0065ABCB /* SystemConfiguration.framework */,
+				7EC22D0818FE86FD0065ABCB /* CFNetwork.framework */,
+				7EC22D0618FE86ED0065ABCB /* CoreTelephony.framework */,
 				1ACB3243164770DE00914215 /* libcurl.a */,
 				BF170DB212928DE900B8313A /* libxml2.dylib */,
 				BF170DB412928DE900B8313A /* libz.dylib */,
@@ -1732,12 +1766,50 @@
 		7E32407C18F5473100AEA70A /* PushHelper */ = {
 			isa = PBXGroup;
 			children = (
+				7EC22CEB18FE84CD0065ABCB /* baiduPush */,
 				7E78EB2F18F6E7AA0096E5D0 /* pushHelper.cpp */,
 				7E78EB3018F6E7AA0096E5D0 /* pushHelper.h */,
 				7EAADA8C18FD633A002869EA /* push.h */,
 			);
 			name = PushHelper;
 			path = ../Classes/PushHelper;
+			sourceTree = "<group>";
+		};
+		7EC22CEB18FE84CD0065ABCB /* baiduPush */ = {
+			isa = PBXGroup;
+			children = (
+				7EC22CEC18FE84CD0065ABCB /* BPushConfig.plist */,
+				7EC22CED18FE84CD0065ABCB /* lib */,
+			);
+			path = baiduPush;
+			sourceTree = "<group>";
+		};
+		7EC22CED18FE84CD0065ABCB /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7EC22CEE18FE84CD0065ABCB /* BPush.h */,
+				7EC22CEF18FE84CD0065ABCB /* libBPush.a */,
+				7EC22CF018FE84CD0065ABCB /* opensource */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		7EC22CF018FE84CD0065ABCB /* opensource */ = {
+			isa = PBXGroup;
+			children = (
+				7EC22CF118FE84CD0065ABCB /* Base64.h */,
+				7EC22CF218FE84CD0065ABCB /* Base64.m */,
+				7EC22CF318FE84CD0065ABCB /* Base64Defines.h */,
+				7EC22CF418FE84CD0065ABCB /* GzipCompressor.h */,
+				7EC22CF518FE84CD0065ABCB /* GzipCompressor.m */,
+				7EC22CF618FE84CD0065ABCB /* JSONKit.h */,
+				7EC22CF718FE84CD0065ABCB /* JSONKit.m */,
+				7EC22CF818FE84CD0065ABCB /* OpenUDID.h */,
+				7EC22CF918FE84CD0065ABCB /* OpenUDID.m */,
+				7EC22CFA18FE84CD0065ABCB /* Reachability.h */,
+				7EC22CFB18FE84CD0065ABCB /* Reachability.m */,
+			);
+			path = opensource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1812,6 +1884,7 @@
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
+				7EC22CFE18FE84CD0065ABCB /* BPushConfig.plist in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
@@ -1865,6 +1938,7 @@
 				15A3D91B1682F7D5002FB0C5 /* b2ContactSolver.cpp in Sources */,
 				15A3D91C1682F7D5002FB0C5 /* b2EdgeAndCircleContact.cpp in Sources */,
 				15A3D91D1682F7D5002FB0C5 /* b2EdgeAndPolygonContact.cpp in Sources */,
+				7EC22D0118FE84CD0065ABCB /* GzipCompressor.m in Sources */,
 				15A3D91E1682F7D5002FB0C5 /* b2PolygonAndCircleContact.cpp in Sources */,
 				15A3D91F1682F7D5002FB0C5 /* b2PolygonContact.cpp in Sources */,
 				15A3D9201682F7D5002FB0C5 /* b2DistanceJoint.cpp in Sources */,
@@ -1976,6 +2050,7 @@
 				1A8F3B76175E05DA00049216 /* BoneData.cpp in Sources */,
 				1A8F3B77175E05DA00049216 /* CCSkeleton.cpp in Sources */,
 				1A8F3B78175E05DA00049216 /* CCSkeletonAnimation.cpp in Sources */,
+				7EC22D0318FE84CD0065ABCB /* OpenUDID.m in Sources */,
 				1A8F3B79175E05DA00049216 /* extension.cpp in Sources */,
 				1A8F3B7A175E05DA00049216 /* Json.cpp in Sources */,
 				1A8F3B7B175E05DA00049216 /* RegionAttachment.cpp in Sources */,
@@ -1994,6 +2069,7 @@
 				379BB99817F03F3700829B88 /* CCActionNode.cpp in Sources */,
 				379BB99917F03F3700829B88 /* CCActionObject.cpp in Sources */,
 				379BB99A17F03F3700829B88 /* CCArmatureAnimation.cpp in Sources */,
+				7EC22D0018FE84CD0065ABCB /* Base64.m in Sources */,
 				379BB99B17F03F3700829B88 /* CCProcessBase.cpp in Sources */,
 				379BB99C17F03F3700829B88 /* CCTween.cpp in Sources */,
 				379BB99D17F03F3700829B88 /* CCArmature.cpp in Sources */,
@@ -2014,6 +2090,8 @@
 				379BB9AC17F03F3700829B88 /* CCUtilMath.cpp in Sources */,
 				379BB9AD17F03F3700829B88 /* CCComAttribute.cpp in Sources */,
 				379BB9AE17F03F3700829B88 /* CCComAudio.cpp in Sources */,
+				7EC22D0218FE84CD0065ABCB /* JSONKit.m in Sources */,
+				7EC22D0418FE84CD0065ABCB /* Reachability.m in Sources */,
 				379BB9AF17F03F3700829B88 /* CCComController.cpp in Sources */,
 				379BB9B017F03F3700829B88 /* CCComRender.cpp in Sources */,
 				379BB9B117F03F3700829B88 /* CCInputDelegate.cpp in Sources */,
@@ -2099,6 +2177,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
+					"/Users/YTB/Documents/coco2d资料及工作/cocos2d-x-2.2/projects/cocos2d-x-pushDemo/Classes/PushHelper/baiduPush/lib",
 				);
 				OTHER_CFLAGS = "-O2";
 				PRODUCT_NAME = pushDemo;
@@ -2147,6 +2226,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
+					"/Users/YTB/Documents/coco2d资料及工作/cocos2d-x-2.2/projects/cocos2d-x-pushDemo/Classes/PushHelper/baiduPush/lib",
 				);
 				PRODUCT_NAME = pushDemo;
 				PROVISIONING_PROFILE = "";
