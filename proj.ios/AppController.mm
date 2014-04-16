@@ -62,14 +62,15 @@ static AppDelegate s_sharedApplication;
     
     [application setApplicationIconBadgeNumber:0];
     
-    //TODO 启动时收到push
+    //启动时收到push delay 5s派发
     NSDictionary * userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if(userInfo) {
         [application setApplicationIconBadgeNumber:0];
         NSLog(@"LaunchOptionsRemoteNotification:%@",[userInfo description]);
-
-        pushHelper::sharedPushHelper()->applicationDidFinishLaunchingWithNotification([[userInfo description] cStringUsingEncoding:NSUTF8StringEncoding]);
         
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            pushHelper::sharedPushHelper()->applicationDidFinishLaunchingWithNotification([[userInfo description] cStringUsingEncoding:NSUTF8StringEncoding]);
+        });
     }
     
     //======================push========================
