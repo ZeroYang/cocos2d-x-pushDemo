@@ -218,8 +218,14 @@ push 消息的推送 需要客户端和服务器的支持。
 * 集成百度云推送
 [参考文档](http://developer.baidu.com/wiki/index.php?title=docs/cplat/push/guideios#SDK.E9.9B.86.E6.88.90)
 
-1. 参照文档完成客户端SDK的集成
+1. 上[百度开发者](http://developer.baidu.com/console#app/project)注册工程
+![img](BPush1.jpg) 
+2. 参照文档完成客户端SDK的集成
+3. 完善工程配置,develop / production选择，上传APNS证书
+![img](BPush2.jpg) 
 
+4. 使用百度云推送控制台推送push
+![img](BPush3.jpg) 
 
 ### push使用
 
@@ -259,9 +265,12 @@ void HelloWorld::applicationdidFailToRegisterForRemoteNotificationsWithError(CCS
 ```
 
 * push运行结果
-1. 获取device Token成功
-2. 绑定百度云推送成功
-3. 收到push消息
+1. 获取device Token成功 绑定百度云推送成功
+![img](BPush4.png)
+2. 收到push消息
+![img](BPush5.png)
+3.系统通知栏显示
+![img](Push1.png)![img](Push2.png)
 
 ### 后记
 
